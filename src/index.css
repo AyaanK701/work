@@ -1,0 +1,379 @@
+/* Reset and base styles */
+body {
+  background-color: #f7fafc;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3748;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Main grid layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* Card styles */
+.card {
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem; /* More left/right padding */
+  min-width: 0;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-x: auto; /* Prevent clipping */
+}
+
+.card input,
+.card select,
+.card table {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card table td, .card table th {
+  padding: 0.5rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a202c;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Form styles */
+label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #cbd5e0;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #3182ce;
+}
+
+/* Button styles */
+button {
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 0.5rem;
+}
+
+button.primary {
+  background-color: #3182ce;
+  color: #fff;
+}
+
+button.primary:hover {
+  background-color: #2b6cb0;
+}
+
+button.secondary {
+  background-color: #fff;
+  color: #2d3748;
+  border: 1px solid #cbd5e0;
+}
+
+button.secondary:hover {
+  background-color: #edf2f7;
+}
+
+button.success,
+button.add {
+  background-color: #22c55e;
+  color: #fff;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+button.success:hover,
+button.add:hover {
+  background-color: #16a34a;
+}
+
+button.danger {
+  background: none;
+  color: #dc2626;
+  font-weight: 600;
+  border: none;
+  text-decoration: underline;
+  margin-left: 0;
+  padding: 0;
+}
+
+button.danger:hover {
+  color: #b91c1c;
+}
+
+/* Section titles and summary */
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.summary-box {
+  background-color: #f7fafc;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.summary-box > div {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2d3748;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+/* Wishlist styles */
+.wishlist-list {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.wishlist-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.wishlist-remove {
+  color: #dc2626;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.wishlist-remove:hover {
+  color: #b91c1c;
+}
+
+.wishlist-price-input {
+  max-width: 120px;
+  width: 100%;
+  display: block;
+  border-radius: 0.375rem;
+  border: 1px solid #cbd5e0;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* Chart container */
+.chart-container {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  min-height: 180px;
+  border: 1px solid #cbd5e0;
+}
+
+/* Entries list */
+.entries-list {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.entries-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.entries-list-item:last-child {
+  border-bottom: none;
+}
+
+.entries-list-item .delete {
+  color: #dc2626;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.entries-list-item .delete:hover {
+  color: #b91c1c;
+}
+
+/* Export CSV link */
+.export-link {
+  color: #3182ce;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.export-link:hover {
+  color: #2b6cb0;
+}
+
+/* "Clear all data" link */
+.clear-link {
+  color: #dc2626;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  text-align: left;
+}
+
+/* Info text */
+.info-text {
+  color: #718096;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+  text-align: left;
+}
+
+/* Header */
+header {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+/* Wishlist input styles */
+input[name="wishlist-item"], /* If you use a name attribute */
+.wishlist-item-input {        /* Or add a class to the input */
+  border: 2px solid #cbd5e0;
+  border-radius: 0.375rem;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* Button group styles */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Dark mode styles */
+.dark-mode,
+.dark-mode body,
+.dark-mode #root {
+  background: #18181b !important;
+  color: #e5e7eb !important;
+}
+
+.dark-mode .card {
+  background: #232326 !important;
+  color: #e5e7eb !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3) !important;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #e5e7eb !important;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background: #18181b !important;
+  color: #e5e7eb !important;
+  border-color: #444 !important;
+}
+
+.dark-mode button {
+  background: #333 !important;
+  color: #e5e7eb !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .border {
+  border-color: #444 !important;
+}
+
+.dark-mode .text-gray-500 {
+  color: #a1a1aa !important;
+}
+
+.dark-mode .text-gray-400 {
+  color: #71717a !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .card {
+    min-width: 0;
+    min-height: 0;
+  }
+}
